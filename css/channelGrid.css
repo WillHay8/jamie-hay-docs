@@ -1,0 +1,152 @@
+#channelGrid {
+	position: relative;
+	margin: 10px auto;
+	width: 100%;
+}
+
+.channelLogo {
+	z-index: 1;
+	display: inline-block;
+	position: relative;
+	width: 33.3%;
+}
+
+.channelLogo img{
+	width: 100%;
+}
+
+.titlesContainer {
+	left: 0;
+}
+
+#overlay {
+	top: 0px;
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	z-index: 0;
+	background-color: rgba(255,255,255,0.5);
+}
+
+.showTitle {
+	font-size: 4.5vw;
+	position: relative;
+	display: inline-block;
+	background-color: white;
+	border: 1px solid black;
+	border-radius: 10px;
+	padding: 1%;
+	margin: 1%;
+}
+
+.titlesContainer {
+	position: absolute;
+	z-index: 3;
+	width: 100%;
+	height: 60%;
+	text-align: center;
+	display: none;
+}
+
+#bbcOneTitles {
+	top: 50%;
+}
+
+#bbcTwoTitles {
+	top: 35%;
+}
+
+#bbcFourTitles {
+	top: 43%;
+}
+
+#itvTitles {
+	left: 40%;
+	width: 50%;
+	top: 12%;
+	text-align: center;
+}
+
+#channel4Titles {
+	top: 77%;
+}
+
+#channel5Titles {
+	top: 15%;
+	left: 0;
+	text-align: center;
+	width: 66%;
+}
+
+#channel5Titles div {
+	margin: 5% 0;
+}
+
+#sky1Titles, #skyArtsTitles {
+	bottom: 40%;
+	height: initial;
+}
+
+#forcesTvTitles {
+	bottom: 33%;
+	height: 40%;
+}
+
+#forcesTvTitles div {
+	margin: 3% 0;
+}
+
+#broadmoor, #commando, #guiness {
+	margin: 3% 0;
+}
+
+#commando {
+	width: initial;
+}
+
+#philip, #storm {
+	margin: 3% 0;
+}
+
+.bbc4Show {
+	margin: 3%;
+}
+
+.noWrap {
+	white-space: nowrap;
+}
+
+#bbcOne:hover,
+#bbcOne:hover ~ #bbcOneTitles,
+#bbcTwo:hover, 
+#bbcTwo:hover ~ #bbcTwoTitles,
+#bbcFour:hover,
+#bbcFour:hover ~ #bbcFourTitles,
+#itv:hover,
+#itv:hover ~ #itvTitles,
+#channel4:hover,
+#channel4:hover ~ #channel4Titles,
+#channel5:hover,
+#channel5:hover ~ #channel5Titles,
+#sky1:hover,
+#sky1:hover ~ #sky1Titles,
+#skyArts:hover,
+#skyArts:hover ~ #skyArtsTitles,
+#forcesTv:hover,
+#forcesTv:hover ~ #forcesTvTitles{
+	display: inline-block;
+	z-index: 3;
+}
+
+#bbcOne:hover ~ #overlay,
+#bbcTwo:hover ~ #overlay,
+#bbcFour:hover ~ #overlay,
+#itv:hover ~ #overlay,
+#channel4:hover ~ #overlay,
+#channel5:hover ~ #overlay,
+#sky1:hover ~ #overlay,
+#skyArts:hover ~ #overlay,
+#forcesTv:hover ~ #overlay{
+	z-index: 2;
+}
+
