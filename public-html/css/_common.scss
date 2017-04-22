@@ -1,0 +1,30 @@
+html{	
+	height: 100%;
+	box-sizing: border-box;
+}
+
+body {
+	background-image: url(../images/background_2_moreSpecks.jpg);
+	height: 100%;
+	margin: 0px;
+	font-family: 'Raleway';
+}
+
+#wrapper {
+	width: 100%;
+	min-height: 100%;
+	display: table;
+}
+
+#headerContainer, #mainContainer{
+	display: table-row;
+}
+
+/* link highlighting */
+.menu a, #footerContact a, #contactPage a, #aboutEmail a{
+	text-decoration: none;
+	color: black;
+}
+.menu a:hover, #footerContact a:hover, #contactPage a:hover, #aboutEmail a:hover{
+	color: red;
+}
