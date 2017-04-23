@@ -1,4 +1,0 @@
-ErrorDocument 404 /notfound.html
-
-RewriteEngine on
-RewriteRule aunt-may/footer-background.jpg /aunt-may/email-opened.php

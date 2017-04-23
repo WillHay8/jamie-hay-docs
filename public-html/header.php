@@ -9,8 +9,8 @@ $description = isset($description)? $description : 'I’m a BAFTA award-winning 
 	<head>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<link rel="shortcut icon" href="images/bafta4.png" type="image/x-icon" />
-		<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Raleway|Alike Angular|Open Sans">
+		<link rel="shortcut icon" href="<?$root_url?>images/bafta4.png" type="image/x-icon" />
+		<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Raleway|Alike Angular|Open Sans">
 		<link rel="stylesheet" type="text/css" href="<?=$root_url?>css/style.css">
 
 		<title><?=$title?></title>
