@@ -122,10 +122,15 @@ nav ul li a {
 #headerImgBack {
   height: 150px;
   width: 100%;
-  background-image: url("../images/sohosq b&w 1280.jpg");
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover; }
+  @media (max-width: 599px) {
+    #headerImgBack {
+      background-image: url("../images/sohosq-b-w-600.jpg"); } }
+  @media (min-width: 600px) {
+    #headerImgBack {
+      background-image: url("../images/sohosq b&w 1280.jpg"); } }
 
 @media (min-width: 368px) {
   #tagline {

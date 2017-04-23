@@ -13,7 +13,7 @@ include('header.php');
 		</div>
 		<div id="contactProfile" class="column">
 			<div class="imageContainer">
-			<img src="<?=$root_url?>images/profile_1.jpg"></img>
+			<img src="<?=$root_url?>images/profile_1.jpg" alt="Jamie Hay"></img>
 			</div>
 		</div>
 	</div>
