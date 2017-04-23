@@ -119,12 +119,10 @@ nav ul li a{
 #headerImgBack{
 	height: 150px;
 	width: 100%;
-}
-
-#headerImg{
-	position: absolute;
-	overflow: hidden;
-	display: none;
+	background-image: url('../images/sohosq b&w 1280.jpg');
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-size: cover;
 }
 
 @include breakpoint($md){
@@ -222,6 +220,7 @@ nav ul li a{
 		position: absolute;
 		top: 0;
 		left: 12.5em;
+		width: initial;
 	}
 
 	#header #row2 #row2Cell {

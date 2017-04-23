@@ -121,12 +121,11 @@ nav ul li a {
 
 #headerImgBack {
   height: 150px;
-  width: 100%; }
-
-#headerImg {
-  position: absolute;
-  overflow: hidden;
-  display: none; }
+  width: 100%;
+  background-image: url("../images/sohosq b&w 1280.jpg");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover; }
 
 @media (min-width: 701px) {
   /* header */
@@ -202,7 +201,8 @@ nav ul li a {
   #header #row2 {
     position: absolute;
     top: 0;
-    left: 12.5em; }
+    left: 12.5em;
+    width: initial; }
 
   #header #row2 #row2Cell {
     display: table-cell;

@@ -64,5 +64,4 @@ $description = isset($description)? $description : 'I’m a BAFTA award-winning 
 					</div>
 				</div>
 				<div id="headerImgBack"></div>
-				<img id="headerImg" src ="images/sohosq b&w 1280.jpg"/>
 			</div>

@@ -13,7 +13,7 @@
 						-->
 					</div>
 					<div id="copyright">
-					<span>© Jamie Hay 2016</span>
+					<span>© Jamie Hay <?=date("Y")?></span>
 					</div>
 				</div>
 			</div>
