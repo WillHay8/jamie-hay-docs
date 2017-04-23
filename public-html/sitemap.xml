@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+	 xmlns:image="http://www.google.com/schemas/sitemap-image/1.1" > 
+  <url>
+    <loc>https://jamiehay.co.uk/</loc> 
+    <image:image>
+		<image:loc>https://jamiehay.co.uk/images/slideshow-stills/1-canals.jpg</image:loc>
+		<image:caption>Great Canal Journeys</image:caption>
+	    </image:image>
+	<image:image>
+		<image:loc>https://jamiehay.co.uk/images/slideshow-stills/2-dukes.jpg</image:loc>
+		<image:caption>The Last Dukes</image:caption>
+	</image:image>
+	<image:image>
+	<image:loc>https://jamiehay.co.uk/images/slideshow-stills/3-wags.jpg</image:loc>
+	<image:caption>Royal Marine Wags and the Great Yomp</image:caption>
+	</image:image>
+	<image:image>
+	<image:loc>https://jamiehay.co.uk/images/slideshow-stills/4-borneo.jpg</image:loc>
+	<image:caption>We Were There: Return to the Jungle</image:caption>
+	</image:image>
+	<image:image>
+	<image:loc>https://jamiehay.co.uk/images/slideshow-stills/5-bragg.jpg</image:loc>
+	<image:caption>Melvyn Bragg: Wigton to Westminster</image:caption>
+	</image:image>
+	<image:image>
+	<image:loc>https://jamiehay.co.uk/images/slideshow-stills/6-royals.jpg</image:loc>
+	<image:caption>Reinventing the Royals</image:caption>
+	</image:image>
+	<image:image>
+	<image:loc>https://jamiehay.co.uk/images/slideshow-stills/7-broadmoor.jpg</image:loc>
+	<image:caption>Broadmoor</image:caption>
+	</image:image>
+	<image:image>
+	<image:loc>https://jamiehay.co.uk/images/slideshow-stills/8-return.jpg</image:loc>
+	<image:caption>Command: Return to the Front Line</image:caption>
+	</image:image>
+	<image:image>
+		<image:loc>https://jamiehay.co.uk/images/slideshow-stills/9-living.jpg</image:loc>
+		<image:caption>Living on the Edge</image:caption>
+	</image:image>
+	<image:image>
+		<image:loc>https://jamiehay.co.uk/images/slideshow-stills/10-hitler.jpg</image:loc>
+		<image:caption>The Dark Charisma of Adolf Hitler</image:caption>
+	</image:image>
+	<image:image>
+		<image:loc>https://jamiehay.co.uk/images/slideshow-stills/11-twins.jpg</image:loc>
+		<image:caption>The Twins of the Twin Towers</image:caption>
+	</image:image>
+	<image:image>
+		<image:loc>https://jamiehay.co.uk/images/slideshow-stills/12-caribbean.jpg</image:loc>
+		<image:caption>Royal Navy Caribbean Patrol</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://jamiehay.co.uk/work/</loc> 
+  </url>
+  <url>
+    <loc>https://jamiehay.co.uk/contact/</loc> 
+    <image:image>
+       <image:loc>https://jamiehay.co.uk/images/profile_1.jpg</image:loc>
+       <image:caption>Jamie Hay profile photo</image:caption>
+    </image:image>
+  </url>
+</urlset>
