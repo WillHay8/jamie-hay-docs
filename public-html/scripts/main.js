@@ -1,6 +1,5 @@
 console.log('main.js start')
-adjustHeaderImg();
-window.addEventListener('resize',identifyChange);
+
 $('#menuButton').on('click', toggleMenu);
 
 function toggleMenu(){

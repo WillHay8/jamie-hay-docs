@@ -36,7 +36,24 @@
 }
 
 /* work */
+.heading-and-download-con{
+	display: table;
+	width: 100%;
+	table-layout: fixed;
+}
+.heading-con, .download-con {
+	display: table-cell;
+	vertical-align: center;
+	width: 50%;
+	button {
+		font-size: 1em;
+	}
+}
 
+#workPage .mainList {
+	width: 100%;
+	box-sizing: border-box;
+}
 
 #workPage .mainList>li{
 	padding: 1em 0em 1em 0em;

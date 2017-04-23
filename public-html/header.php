@@ -1,5 +1,5 @@
 <?php
-include('constants.php');
+include('../constants.php');
 $title = isset($title)? $title : 'Jamie Hay Documentaries';
 $description = isset($description)? $description : 'I’m a BAFTA award-winning television documentary editor for The Nazis a Warning from History. Feel free to contact me for London based work.';
 ?>
@@ -11,7 +11,7 @@ $description = isset($description)? $description : 'I’m a BAFTA award-winning 
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<link rel="shortcut icon" href="images/bafta4.png" type="image/x-icon" />
 		<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Raleway|Alike Angular|Open Sans">
-		<link rel="stylesheet" type="text/css" href="css/style.css">
+		<link rel="stylesheet" type="text/css" href="<?=$root_url?>css/style.css">
 
 		<title><?=$title?></title>
 		<meta name="description" content="<?=$description?>">
@@ -27,7 +27,7 @@ $description = isset($description)? $description : 'I’m a BAFTA award-winning 
 					<div id="header">
 						<div id="row1">
 							<div id="name">
-								<a href="index.php">
+								<a href="<?=$root_url?>">
 									<span id="jamieHay" class="nowrap">Jamie Hay</span>
 								</a>
 							</div>
@@ -40,13 +40,13 @@ $description = isset($description)? $description : 'I’m a BAFTA award-winning 
 								<nav>
 									<ul>
 										<li class="first">
-											<a href="index.php">About</a>
+											<a href="<?=$root_url?>">About</a>
 										</li>
 										<li>
-											<a href="work.php">Work</a>
+											<a href="<?=$root_url?>work/">Work</a>
 										</li>
 										<li>
-											<a href="contact.php">Contact</a>
+											<a href="<?=$root_url?>contact/">Contact</a>
 										</li>
 									</ul>
 								</nav>

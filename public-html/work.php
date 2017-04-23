@@ -5,7 +5,14 @@ include('header.php');
 ?>
 
 <div class="page" id="workPage">
-<h1>Work</h1>
+<div class="heading-and-download-con">
+	<div class="heading-con">
+		<h1>Work</h1>
+	</div>
+	<div class="download-con">
+		<a href="<?=$root_url?>files/JamieHayCV.pdf" download><button>Download CV</button></a></p>
+	</div>
+</div>
 <div class="pageContent">
 <ul class="mainList">
 	<li><ul class="subList">
@@ -112,7 +119,7 @@ include('header.php');
 	</ul></li>
 </ul>
 <div id="downloadCV">
-	<p>For full list: <a href="files/JamieHayCV.pdf" download><button>Download CV</button></a></p>
+	<p>For full list: <a href="<?=$root_url?>files/JamieHayCV.pdf" download><button>Download CV</button></a></p>
 </div>
 </div>
 </div>

@@ -18,9 +18,8 @@
 				</div>
 			</div>
 		</div>
-		<script src="scripts/jquery-3.1.0.js"></script>
-		<script src="scripts/resizeHeaderImg.js"></script>
-		<script src="scripts/main.js"></script>
+		<script src="<?=$root_url?>scripts/jquery-3.1.0.js"></script>
+		<script src="<?=$root_url?>scripts/main.js"></script>
 	</body>
 
 </html>

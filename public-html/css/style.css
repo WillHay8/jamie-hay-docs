@@ -55,9 +55,9 @@ body {
   padding-right: 2.5%;
   font-size: 2.1rem; }
 
-#editor, #baftaWinning {
+#tagline {
   color: black;
-  font-size: 1.2rem; }
+  font-size: 0.9rem; }
 
 .nowrap {
   white-space: nowrap; }
@@ -127,6 +127,9 @@ nav ul li a {
   background-position: center center;
   background-size: cover; }
 
+@media (min-width: 368px) {
+  #tagline {
+    font-size: 1.2rem; } }
 @media (min-width: 701px) {
   /* header */
   #name {
@@ -137,9 +140,7 @@ nav ul li a {
 
   #tagline {
     display: inline-block;
-    width: 100%; }
-
-  #editor, #baftaWinning {
+    width: 100%;
     font-size: 1.5rem; }
 
   #menuButtonContainer {
@@ -210,7 +211,7 @@ nav ul li a {
     vertical-align: middle;
     text-align: left; }
 
-  #editor, #baftaWinning {
+  #tagline {
     font-size: 1.3rem; }
 
   #headerImgBack {
@@ -424,6 +425,22 @@ nav ul li a {
   padding: 0.5em; }
 
 /* work */
+.heading-and-download-con {
+  display: table;
+  width: 100%;
+  table-layout: fixed; }
+
+.heading-con, .download-con {
+  display: table-cell;
+  vertical-align: center;
+  width: 50%; }
+  .heading-con button, .download-con button {
+    font-size: 1em; }
+
+#workPage .mainList {
+  width: 100%;
+  box-sizing: border-box; }
+
 #workPage .mainList > li {
   padding: 1em 0em 1em 0em; }
 

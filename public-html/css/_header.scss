@@ -19,9 +19,6 @@
 	width: 100%;
 }
 
-#tagline{
-}
-
 #baftaWinning, #editor{
 	display: inline;
 }
@@ -41,9 +38,9 @@
 	font-size: 2.1rem;
 }
 
-#editor, #baftaWinning {
+#tagline {
 	color: black;
-	font-size: 1.2rem;
+	font-size: 0.9rem;
 }
 
 .nowrap{
@@ -125,6 +122,12 @@ nav ul li a{
 	background-size: cover;
 }
 
+@include breakpoint($xxs){
+	#tagline{ 
+		font-size: 1.2rem;
+	}
+}
+
 @include breakpoint($md){
 /* header */
 	#name {
@@ -138,11 +141,9 @@ nav ul li a{
 	#tagline {
 		display: inline-block;
 		width: 100%;
-	}
-
-	#editor, #baftaWinning{
 		font-size: 1.5rem;
 	}
+
 
 	#menuButtonContainer{
 		display: none;
@@ -230,7 +231,7 @@ nav ul li a{
 		text-align: left;
 	}
 
-	#editor, #baftaWinning{
+	#tagline{
 		font-size: 1.3rem;
 	}
 

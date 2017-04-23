@@ -1,16 +1,10 @@
+$xxs: 368px;
 $md: 701px;
 $lg: 1024px;
 
 @mixin breakpoint($width){
-	@if ($width==$md){
-		@media(min-width: 701px){
-			@content;
-		}
-	}
-	@else if($width==$lg){
-		@media(min-width: 1024px){
-			@content;
-		}
+	@media(min-width: $width){
+		@content;
 	}
 }
 

@@ -12,8 +12,8 @@ include ('header.php');
 				A Warning From History' with Laurence Rees (BAFTA for best editing factual in 1997), 
 				'Commando, On The Front Line' with Chris Terrill at Uppercut Films in 2005 and 
 				'The Twins of the Twin Towers' with Olivia Lichtenstein at StoryVault Films in 2012. 
-				For more see my <a href="work.php">work page</a> or 
-				<a href="files/JamieHayCV.pdf" download>download my CV</a>.
+				For more see my <a href="<?=$root_url?>work/">work page</a> or 
+				<a href="<?=$root_url?>files/JamieHayCV.pdf" download>download my CV</a>.
 			</p>
 			<p>
 				The highlight of editing for me is identifying the narrative and giving
@@ -38,4 +38,6 @@ include ('header.php');
 	</div>
 	</div>
 </div>
-<?php include('footer.php');
+<?php 
+include('footer.php');
+?>

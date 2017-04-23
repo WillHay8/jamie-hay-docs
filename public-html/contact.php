@@ -1,7 +1,7 @@
 <?php 
 $title = 'Contact | Jamie Hay';
 $description = 'Contact details for television documentary editor Jamie Hay';
-@include('header.php');
+include('header.php');
 ?>
 
 <div class="page" id="contactPage">
@@ -13,12 +13,12 @@ $description = 'Contact details for television documentary editor Jamie Hay';
 		</div>
 		<div id="contactProfile" class="column">
 			<div class="imageContainer">
-			<img src="images/profile_1.jpg"></img>
+			<img src="<?=$root_url?>images/profile_1.jpg"></img>
 			</div>
 		</div>
 	</div>
 </div>
 
 <?php
-@include('footer.php');
+include('footer.php');
 ?>
