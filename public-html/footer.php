@@ -1,16 +1,9 @@
 			<div id="footerBar">
 				<div id="footer">
 					<div id="footerContact">
-					<!--
-						<ul>
-							<li class="farLeft">
-								<a id="emailLink" href="mailto:jamiehaydocs@gmail.com?Subject=Hello">jamiehaydocs@gmail.com</a>
-							</li>
-							<li>
-							07980169167
-							</li>		
-						</ul>
-						-->
+						<?php if($page != "about"){ ?>
+						<a href="<?=$root_url?>">Read more about Jamie Hay</a>
+						<?php } ?>
 					</div>
 					<div id="copyright">
 					<span>© Jamie Hay <?=date("Y")?></span>

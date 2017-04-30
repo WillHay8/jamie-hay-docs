@@ -1,4 +1,5 @@
 <?php 
+$page = "contact"; 
 $title = 'Contact | Jamie Hay';
 $description = 'Contact details for television documentary editor Jamie Hay';
 include('header.php');

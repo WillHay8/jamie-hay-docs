@@ -31,6 +31,22 @@ date date not null,
 primary key (id)
 );
 
+create table personal_details (
+id mediumint(9) auto_increment,
+username varchar(255) not null,
+passwordHash varchar(255),
+first_name varchar(255),
+last_name varchar(255),
+email varchar(255),
+phone varchar(11),
+primary key(id)
+);
+
+insert into personal_details (username, first_name, last_name, email, phone) values
+('jamie', 'Jamie', 'Hay', 'jamiehaydocs@gmail.com', '07980169167');
+
+insert into cv (filename, date_uploaded) values ('JamieHayCV_2017-01-01.pdf', '2017-01-01');
+
 insert into paragraph (title, body) values ('About', "<p>I am a freelance offline documentary editor based in London. I spent 20 years at the BBC where I learned my craft and have had the privilege of working with many talented directors. Some of the key documentaries I have edited include 'The Nazis, A Warning From History' with Laurence Rees (BAFTA for best editing factual in 1997), 'Commando, On The Front Line' with Chris Terrill at Uppercut Films in 2005 and 'The Twins of the Twin Towers' with Olivia Lichtenstein at StoryVault Films in 2012. For more see my work page or download my CV.</p>
 	<p>The highlight of editing for me is identifying the narrative and giving insight into character's lives. Please feel free to call or email me for a chat. My details are below.'</p>");
 
