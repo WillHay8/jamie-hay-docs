@@ -3,32 +3,32 @@ include('../../constants.php');
 include('../../dao.php');
 $upload_received = false;
 $error_message = "";
-if(isset($_FILES['cv']) && !empty($_FILES['cv']['name'])){
+if(isset($_FILES['profilepic']) && !empty($_FILES['profilepic']['name'])){
 	$upload_received = true;
-	$file_temp = $_FILES['cv']['tmp_name'];
-	$filename = basename($_FILES['cv']["name"]);
+	$file_temp = $_FILES['profilepic']['tmp_name'];
+	$filename = basename($_FILES['profilepic']["name"]);
 	$file_type = strtolower(pathinfo($filename,PATHINFO_EXTENSION));
-	$target_file = $root_dir."files/"."JamieHayCV_".date('Y-m-d').".".$file_type;
+	$target_file = $root_dir."files/"."JamieHayprofilepic_".date('Y-m-d').".".$file_type;
 	
 	$uploadOk = 1;
     // check filesize
-    error_log("filesize:".$_FILES['cv']["size"]);
-    if($_FILES['cv']['error']){
-    	$error_message = "there was an error sending the file, CV must not be over 5MB";
+    error_log("filesize:".$_FILES['profilepic']["size"]);
+    if($_FILES['profilepic']['error']){
+    	$error_message = "there was an error sending the file, profilepic must not be over 5MB";
     	$uploadOk = 0;
     }
-    else if($_FILES['cv']["size"] > 5000000){
+    else if($_FILES['profilepic']["size"] > 5000000){
     	$error_message = "file must be under 5MB, please compress any images within it";
     	$uploadOk = 0;
     }
-	else if($file_type != "pdf") {
-		$error_message = "Sorry, only PDF files are allowed. <br />";
+	else if($file_type != "jpg" && $file_type != "jpeg" && $file_type != "png" && $file_type != "gif") {
+		$error_message = "Sorry, only jpegs, pngs and gifs are allowed. <br />";
 		$uploadOk = 0;
 	}
     $upload_success = false;
     if($uploadOk){
 	    if(move_uploaded_file($file_temp, $target_file)){
-	    	if(save_cv_to_database(basename($target_file))){
+	    	if($image_id = save_profilepic_to_database(basename($target_file))){
 	    		$error_message = "upload successful!";
 	    		$upload_success = true;
 	    	}
@@ -42,10 +42,10 @@ if(isset($_FILES['cv']) && !empty($_FILES['cv']['name'])){
 	}
 }
 error_log("upload_received=".$upload_received);
-$latest_cv_full_path = get_latest_cv_full_path();
-$latest_cv_date_uploaded = get_latest_cv_date_uploaded();
-$cv_path_array = explode('/',$latest_cv_full_path);
-$latest_cv_filename = $cv_path_array[count($cv_path_array)-1];
+$latest_profilepic_full_path = get_latest_profilepic_full_path();
+$latest_profilepic_date_uploaded = get_latest_profilepic_date_uploaded();
+$profilepic_path_array = explode('/',$latest_profilepic_full_path);
+$latest_profilepic_filename = $profilepic_path_array[count($profilepic_path_array)-1];
 ?>
 <!DOCTYPE html>
 <html>
@@ -89,23 +89,29 @@ $latest_cv_filename = $cv_path_array[count($cv_path_array)-1];
 					<h1 align="center">Jamie Hay Website Admin Center</h1>
 				</div>
 				<div class="col-12">
-					<div class="col-8 col-md-4 col-lg-3">
-						<a href="<?=$root_url?>admin/">
-							<div class="button">← Back + Save</div>
-						</a>
+					<div class="row">
+						<div class="col-8 offset-2 col-md-4 offset-md-0 col-lg-3">
+							<a href="<?=$root_url?>admin/">
+								<div id="back" class="button">← Back</div>
+							</a>
+						</div>
+						<div class="col-8 offset-2 col-md-4 offset-md-4 col-lg-3 offset-lg-6">
+							<a href="<?=$root_url?>contact/">
+								<div id="view" class="button">View Page →</div>
+							</a>
+						</div>
 					</div>
 				</div>
 
 
 
 				<div class="col-12 col-sm-10 offset-sm-1 col-md-8 offset-md-2 col-lg-6 offset-lg-3 pad-top-20">
-					<h4>Select your latest CV by clicking the button below:</h3>
-					<form id="cv-upload-form" method="post" enctype="multipart/form-data" action="<?=$root_url?>admin/cv.php">
+					<h4>Select your latest profilepic by clicking the button below:</h3>
+					<form id="profilepic-upload-form" method="post" enctype="multipart/form-data" action="<?=$root_url?>admin/profile-picture/">
 						<input type="hidden" name="test" value="123">
-						<input id="cv-input" type="file" name="cv">
-						<input id="submit-cv" type="submit" hidden>
+						<input id="profilepic-input" type="file" name="profilepic">
+						<input id="submit-profilepic" type="submit" hidden>
 					</form>
-					<p> latest cv: <a href="<?=$latest_cv_full_path?>"><?=$latest_cv_filename?></a> uploaded on <?=date('d/m/Y',strtotime($latest_cv_date_uploaded))?></p>
 					<?php if($upload_received){
 
 						if($upload_success){ ?>
@@ -118,12 +124,14 @@ $latest_cv_filename = $cv_path_array[count($cv_path_array)-1];
 							</p>
 						<?php }
 					} ?>
+					<p> latest profilepic: <a href="<?=$latest_profilepic_full_path?>"><?=$latest_profilepic_filename?></a> uploaded on <?=date('d/m/Y',strtotime($latest_profilepic_date_uploaded))?></p>
+					<img src="<?=$latest_profilepic_full_path?>">
 				</div>
 			</div>
 		</div>
 		<script>
-			var formSubmit = document.getElementById("submit-cv");
-			var fileInput = document.getElementById("cv-input");
+			var formSubmit = document.getElementById("submit-profilepic");
+			var fileInput = document.getElementById("profilepic-input");
 			fileInput.onchange = function(){ formSubmit.click(); };
 		</script>
 	</body>

@@ -1,5 +1,8 @@
 <?php 
 $page = "contact"; 
+include('../dao.php');
+$jamie_details = get_jamie_details();
+$profile_pic_full_path = get_latest_profilepic_full_path();
 $title = 'Contact | Jamie Hay';
 $description = 'Contact details for television documentary editor Jamie Hay';
 include('header.php');
@@ -9,12 +12,12 @@ include('header.php');
 	<h1>Contact</h1>
 	<div class="pageContent">
 		<div id="contactDetails" class="column">
-			<div id="email"><a id="emailLink" href="mailto:jamiehaydocs@gmail.com?Subject=Hello">jamiehaydocs@gmail.com</a></div>
-			<div id="phone">07980 169167</div>	
+			<div id="email"><a id="emailLink" href="mailto:jamiehaydocs@gmail.com?Subject=Hello"><?=$jamie_details['email']?></a></div>
+			<div id="phone"><?=$jamie_details['phone']?></div>	
 		</div>
 		<div id="contactProfile" class="column">
 			<div class="imageContainer">
-			<img src="<?=$root_url?>images/profile_1.jpg" alt="Jamie Hay"></img>
+			<img src="<?=$profile_pic_full_path?>" alt="Jamie Hay"></img>
 			</div>
 		</div>
 	</div>

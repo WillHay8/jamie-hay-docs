@@ -22,6 +22,13 @@ date_uploaded datetime not null,
 primary key (id)
 );
 
+create table profilepic (
+id mediumint(9) auto_increment,
+filename varchar(255) not null,
+date_uploaded datetime not null,
+primary key (id)
+);
+
 create table work (
 id mediumint(9) auto_increment,
 program_title varchar(255) not null,
@@ -41,6 +48,8 @@ email varchar(255),
 phone varchar(11),
 primary key(id)
 );
+
+
 
 insert into personal_details (username, first_name, last_name, email, phone) values
 ('jamie', 'Jamie', 'Hay', 'jamiehaydocs@gmail.com', '07980169167');

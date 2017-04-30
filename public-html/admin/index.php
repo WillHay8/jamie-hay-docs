@@ -64,6 +64,13 @@ include('../../dao.php');
 						</div>
 					</a>
 				</div>
+				<div class="col-12 col-sm-6 col-lg-3" >
+					<a href="<?=$root_url?>admin/profile-picture/">
+						<div class="actions">
+							<h4>Update your profile picture</h4>	
+						</div>
+					</a>
+				</div>
 			</div>
 		</div>
 	</body>

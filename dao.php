@@ -204,3 +204,53 @@ function update_about($about){
 	$conn->close();
 	return false;
 }
+
+function save_profilepic_to_database($filename){
+	$date_uploaded = date('Y-m-d H:i:s');
+	$conn = connect();
+	$insert_stmt = $conn->prepare("insert into profilepic (filename, date_uploaded) values (?, ?)");
+	$insert_stmt->bind_param("ss", $filename, $date_uploaded);
+	if($insert_stmt->execute()){
+		$insert_stmt->close();
+		$conn->close();
+		return true;
+	}
+	$insert_stmt->close();
+	$conn->close();
+	return false;
+}
+
+function get_latest_profilepic_full_path(){
+	include('constants.php');
+	$conn = connect();
+	$get_stmt = $conn->prepare('select pp1.filename from profilepic pp1 where pp1.date_uploaded=(select max(pp2.date_uploaded) from profilepic pp2)');
+	if($get_stmt->execute()){
+		$get_stmt->bind_result($profilepic_filename);
+		if($get_stmt->fetch()){
+			$get_stmt->close();
+			$conn->close();
+			return $root_url."files/".$profilepic_filename;
+		}
+	}
+	error_log($conn->error);
+	$get_stmt->close();
+	$conn->close();
+	return false;
+}
+
+function get_latest_profilepic_date_uploaded(){
+	$conn = connect();
+	$get_stmt = $conn->prepare('select max(date_uploaded) from profilepic');
+	if($get_stmt->execute()){
+		$get_stmt->bind_result($profilepic_upload_date);
+		if($get_stmt->fetch()){
+			$get_stmt->close();
+			$conn->close();
+			return $profilepic_upload_date;
+		}
+	}
+	error_log($conn->error);
+	$get_stmt->close();
+	$conn->close();
+	return false;	
+}
